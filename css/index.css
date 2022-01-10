@@ -1,3 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
   --padding--result: 30px;
   --padding--basics: 50px;
@@ -28,6 +36,61 @@ body {
   display: none;
 }
 
+.loader {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  color: #fff;
+  font-size: 2.1rem;
+  font-weight: 300;
+  background-color: black;
+  text-align: center;
+  line-height: 100vh;
+  -webkit-animation: textslide 3s infinite alternate;
+          animation: textslide 3s infinite alternate;
+}
+
+.loader::after {
+  position: fixed;
+  z-index: 1000;
+  color: white;
+  content: "";
+  -webkit-animation: loader 1200ms linear infinite;
+          animation: loader 1200ms linear infinite;
+}
+
+@-webkit-keyframes loader {
+  0% {
+    content: "";
+  }
+  25% {
+    content: ".";
+  }
+  50% {
+    content: "..";
+  }
+  75% {
+    content: "...";
+  }
+}
+
+@keyframes loader {
+  0% {
+    content: "";
+  }
+  25% {
+    content: ".";
+  }
+  50% {
+    content: "..";
+  }
+  75% {
+    content: "...";
+  }
+}
+
 #wrap {
   height: auto;
   position: relative;
@@ -41,8 +104,9 @@ body {
   display: -ms-flexbox;
   display: flex;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  position: relative;
-  display: none;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
 }
 
 #main-show-text-hello {
@@ -92,7 +156,7 @@ header {
   height: 10vh;
   position: fixed;
   top: 0;
-  z-index: 99999;
+  z-index: 999;
 }
 
 #hamburger {
@@ -135,8 +199,19 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+}
+
+#menu::before {
+  content: "";
+  background: url(../img/image-from-rawpixel-id-393546-jpeg.jpg);
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0px;
+  z-index: -1;
+  bottom: 0px;
+  opacity: 0.8;
 }
 
 #menu li {
@@ -174,16 +249,18 @@ header {
 
 #section {
   width: 100%;
-  height: 200vh;
+  height: auto;
   margin: 0 auto;
   position: relative;
   z-index: 1;
 }
 
-#first {
+#first,
+#second {
   position: absolute;
   top: 60px;
   left: 23vw;
+  z-index: 3;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 15vw;
   -webkit-text-stroke: 5px white;
@@ -191,7 +268,13 @@ header {
   color: rgba(0, 0, 0, 0);
 }
 
-.one-section {
+#second {
+  top: 60px;
+  left: 47vw;
+}
+
+.one-section,
+.three-section {
   width: 80%;
   height: auto;
   display: -webkit-box;
@@ -199,6 +282,13 @@ header {
   display: flex;
   margin: 0 auto;
   background-color: rgba(1, 1, 1, 0.4);
+  position: relative;
+}
+
+.three-section {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .about-me-3d {
@@ -259,7 +349,181 @@ header {
   padding-left: var(--padding--basics);
 }
 
-.two-section {
+.skils-me-3d {
+  width: 40%;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  margin-top: 45vh;
+}
+
+.skils-me-3d-front {
+  padding: 100px;
+  background: #111;
+  -webkit-transform: translateZ(50px);
+          transform: translateZ(50px);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  color: white;
+  text-transform: uppercase;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 5vw;
+  cursor: default;
+}
+
+.skils-me-3d-front:before {
   width: 100%;
+  height: var(--banner-height);
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: 0;
+  background: #333;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+  -webkit-transform-origin: center bottom;
+          transform-origin: center bottom;
+}
+
+.skils-me-3d-front:after {
+  width: 100%;
+  height: var(--banner-height);
+  content: "";
+  position: absolute;
+  background: #333;
+  bottom: -52px;
+  left: 0;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+  -webkit-transform-origin: center top;
+          transform-origin: center top;
+}
+
+.two-section {
   height: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: var(--padding--result);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.image {
+  width: 50vw;
+  position: relative;
+  padding-left: 1vw;
+  overflow: hidden;
+}
+
+.image img {
+  width: 50vw;
+  height: 85vh;
+  cursor: pointer;
+}
+
+.image img:nth-of-type(1) {
+  position: relative;
+  z-index: 2;
+}
+
+.image img:not(:nth-of-type(1)) {
+  position: absolute;
+  left: 1vw;
+  z-index: 1;
+}
+
+.content {
+  width: 30vw;
+  padding: 10vw 10vw 3vw 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: default;
+}
+
+.content-date {
+  color: #fff;
+  letter-spacing: 0.2vw;
+  font-family: 'Pretendard-Regular';
+  font-size: 1vw;
+  padding-bottom: 1vw;
+}
+
+.content-title {
+  color: #fff;
+  font-family: 'Staatliches', cursive;
+  font-size: 3vw;
+  padding-bottom: 1vw;
+  white-space: nowrap;
+}
+
+.content-text {
+  color: #fff;
+  font-family: 'Pretendard-Regular';
+  font-size: 0.9vw;
+  padding-bottom: 3vw;
+  text-align: center;
+}
+
+.content-more button {
+  width: 6vw;
+  height: 5vh;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: white;
+  cursor: pointer;
+  background: transparent;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.content-more button:hover {
+  -webkit-box-shadow: 120px 0 0 0 #434c51 inset;
+          box-shadow: 120px 0 0 0 #434c51 inset;
+}
+
+.arrows {
+  position: absolute;
+  right: 15%;
+  bottom: 15%;
+}
+
+.arrow {
+  width: 2.5vw;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  cursor: pointer;
+}
+
+.arrow:not(:nth-child(2)) {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
 }

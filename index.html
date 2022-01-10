@@ -12,13 +12,15 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
 
     <script src="js/index.js"></script>
 </head>
 <body>
 
     <div id="wrap">
+        <span class="loader">Loding</span>
+
         <div id="main-show">
             <div id="main-show-text-hello">
                 Hello,
@@ -48,6 +50,9 @@
                         <a href="#about-me-3d">works</a>
                     </li>
                     <li>
+                        <a href="#">skils</a>
+                    </li>
+                    <li>
                         <a href="#">about</a>
                     </li>
                     <li>
@@ -68,11 +73,233 @@
                 </div>
             </div>
 
-            <div class="two-section">
-                <div class="work">
-                    <div class="work-pf1">
+            <div class="two-section" id="slider">
+                <div class="slider-wrapper flex">
 
+                    <div class="slide flex"> <!--8-->
+                        <div class="image">
+                            <img id="bg" src="img/20220110_150132.png" alt="">
+                            <img id="abs" src="img/main8.jpg" alt="">
+                        </div>
+
+                        <div class="content">
+                            <div class="content-date">
+                                2021.12.22. ~ 2022.01.09.
+                            </div>
+                            <div class="content-title">
+                                iPad UI Website
+                            </div>
+                            <div class="content-text">
+                                아이패드 ui 형식으로 제작하였습니다. 메인 페이지, 4개의 서브 페이지로 구성되어 있습니다.
+                                하단에 4개의 아이콘을 클릭하면 각 해당 서브 페이지로 이동합니다.
+                            </div>
+                            <div class="content-more">
+                                <button onclick="window.open('about:blank').location.href='https://fe2oz.github.io/My-Favorite-Things/';">MAIN</button><br><br>
+                                <button onclick="window.open('about:blank').location.href='https://fe2oz.github.io/My-Favorite-Things/pinterest.html';">SUB1</button>
+                                <button onclick="window.open('about:blank').location.href='https://fe2oz.github.io/My-Favorite-Things/music.html';">SUB2</button>
+                                <button onclick="window.open('about:blank').location.href='https://fe2oz.github.io/My-Favorite-Things/netflix.html';">SUB3</button>
+                                <button onclick="window.open('about:blank').location.href='https://fe2oz.github.io/My-Favorite-Things/matt_mcguire.html'">SUB4</button><br><br>
+                                <button>PPT</button>
+                            </div>
+                        </div>
                     </div>
+
+                    <div class="slide flex"> <!--7-->
+                        <div class="image">
+                            <img id="bg" src="img/20220110_150455.png" alt="">
+                            <img id="abs" src="img/main7.jpg" alt="">
+                        </div>
+
+                        <div class="content">
+                            <div class="content-date">
+                                2021.12.13. ~ 2021.12.20.
+                            </div>
+                            <div class="content-title">
+                                Mononoke Hime Website
+                            </div>
+                            <div class="content-text">
+                                스튜디오 지브리사의 영화 모노노케 히메 홈페이지를 제작하였습니다. 영화의 분위기를 생각해
+                                흰색과 파란색을 주로 사용하였고, 플러그인을 사용하여 눈이 내리는 효과를 연출하였습니다.<br>
+                                메인 페이지와 3개의 서브 페이지로 구성되어 있으며, 모바일 사용자에 맞게 반응형 홈페이지로 제작되었습니다.<br>
+                                상단 메뉴에 ABOUT / CLIP / GALLERY 를 클릭하면 각 해당 서브 페이지로 이동합니다.
+                            </div>
+                            <div class="content-more">
+                                <button onclick="window.open('about:blank').location.href='https://fe2oz.github.io/mononoke-hime/';">MAIN</button><br><br>
+                                <button onclick="window.open('about:blank').location.href='https://fe2oz.github.io/mononoke-hime/about.html';">SUB1</button>
+                                <button onclick="window.open('about:blank').location.href='https://fe2oz.github.io/mononoke-hime/trailer.html';">SUB2</button>
+                                <button onclick="window.open('about:blank').location.href='https://fe2oz.github.io/mononoke-hime/gallery.html';">SUB3</button><br><br>
+                                <button>PPT</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide flex"> <!--6-->
+                        <div class="image">
+                            <img id="bg" src="img/20220110_154714.png" alt="">
+                            <img id="abs" src="img/main6.jpg" alt="">
+                        </div>
+
+                        <div class="content">
+                            <div class="content-date">
+                                2021.12.06. ~ 2021.12.14.
+                            </div>
+                            <div class="content-title">
+                                The weeknd Website
+                            </div>
+                            <div class="content-text">
+                                캐나다의 가수이자 프로듀서인 위켄드의 홈페이지를 제작하였습니다. 최근 발매한 앨범의
+                                콘셉트와 기존 가수의 홈페이지를 참고하여 주로 앨범 색상에 있는 파란색과 검은색을 사용하였습니다.<br>
+                                메인 페이지와 1개의 서브 페이지로 구성되어 있으며, 모바일 사용자에 맞게 반응형 홈페이지로 제작되었습니다.<br>
+                                상단 메뉴의 MUSIC 을 클릭하면 해당 서브 페이지로 이동합니다.
+                            </div>
+                            <div class="content-more">
+                                <button>MAIN</button>
+                                <button>SUB</button>
+                                <button>PPT</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide flex"> <!--5-->
+                        <div class="image">
+                            <img id="bg" src="img/20220110_152501.png" alt="">
+                            <img id="abs" src="img/main5.jpg" alt="">
+                        </div>
+
+                        <div class="content">
+                            <div class="content-date">
+                                2021.11.29. ~ 2021.12.06.
+                            </div>
+                            <div class="content-title">
+                                marcello barenghi Website
+                            </div>
+                            <div class="content-text">
+                                이탈리아의 화가이자 유튜버인 마르첼로 바렌기의 홈페이지를 제작하였습니다.<br>
+                                주제와 하고 싶던 레이아웃 모두 반 고흐 미술관 사이트에서 영감을 받아 전체적인 디자인은
+                                위 사이트를 많이 참고하였습니다.<br>
+                                원페이지로 구성되어 있으며, 모바일 사용자에 맞게 반응형 홈페이지로 제작되었습니다.
+                            </div>
+                            <div class="content-more">
+                                <button>MAIN</button>
+                                <button>PPT</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide flex"> <!--4-->
+                        <div class="image">
+                            <img id="bg" src="img/20220110_161255.png" alt="">
+                            <img id="abs" src="img/main4.jpg" alt="">
+                        </div>
+
+                        <div class="content">
+                            <div class="content-date">
+                                2021.11.25. ~ 2021.12.01.
+                            </div>
+                            <div class="content-title">
+                                my name Website
+                            </div>
+                            <div class="content-text">
+                                넷플릭스 드라마인 마이 네임을 홈페이지로 제작하였습니다. 드라마의 분위기를 생각하여 전체적으로
+                                검은색과 어두운 빨간색을 주로 사용하였습니다.<br>
+                                원페이지로 구성되어 있으며, 모바일 사용자에 맞게 반응형 홈페이지로 제작되었습니다.<br>
+                                왼쪽의 메뉴를 클릭하면 해당 섹션으로 이동합니다.
+                            </div>
+                            <div class="content-more">
+                                <button>MAIN</button>
+                                <button>PPT</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide flex"> <!--3-->
+                        <div class="image">
+                            <img id="bg" src="img/20220110_154323.png" alt="">
+                            <img id="abs" src="img/main3.jpg" alt="">
+                        </div>
+
+                        <div class="content">
+                            <div class="content-date">
+                                2021.11.16. ~ 2021.11.21.
+                            </div>
+                            <div class="content-title">
+                                Machine Gun Kelly Website
+                            </div>
+                            <div class="content-text">
+                                미국 래퍼이자 가수인 머신 건 켈리의 홈페이지를 제작하였습니다. 최근 발매한 앨범의
+                                콘셉트와 기존 홈페이지를 참고하여 주로 검은색과 포인트 색상으로 핑크색을 사용하였습니다.<br>
+                                메인 페이지와 1개의 서브 페이지로 구성되어 있으며, 모바일 사용자에 맞게 반응형 홈페이지로 제작되었습니다.<br>
+                                상단 메뉴의 TOUR 를 클릭하면 해당 서브 페이지로 이동합니다.
+                            </div>
+                            <div class="content-more">
+                                <button>MAIN</button>
+                                <button>SUB</button>
+                                <button>PPT</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide flex"> <!--2-->
+                        <div class="image">
+                            <img id="bg" src="img/20220110_154830.png" alt="">
+                            <img id="abs" src="img/main2.jpg" alt="">
+                        </div>
+
+                        <div class="content">
+                            <div class="content-date">
+                                2021.11.02. ~ 2021.11.12.
+                            </div>
+                            <div class="content-title">
+                                GAME Website
+                            </div>
+                            <div class="content-text">
+                                팀 프로젝트로 게임 샵 홈페이지를 제작하였습니다. 메인과 헤더·풋터를 담당하였고,
+                                맡은 부분에 보완이 필요하거나 수정할 부분들은 팀원들과 협의하여 함께 수정해 나갔습니다.
+                            </div>
+                            <div class="content-more">
+                                <button>MAIN</button>
+                                <button>PPT</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide flex"> <!--1-->
+                        <div class="image">
+                            <img id="bg" src="img/20220110_154922.png" alt="">
+                            <img id="abs" src="img/main1.jpg" alt="">
+                        </div>
+
+                        <div class="content">
+                            <div class="content-date">
+                                2021.10.08. ~ 2021.10.27.
+                            </div>
+                            <div class="content-title">
+                                VAMIR Website
+                            </div>
+                            <div class="content-text">
+                                웹 사이트 제작함에 있어 필요한 기본적인 html, css 지식들만 갖춘 채 제작하였습니다. 
+                                모든 게 생소했던 터라 각 섹션을 원하는 위치에 어떻게 배치하는 건지, 크기는 어떻게 
+                                잡아야 하는 건지 우왕좌왕했었던 첫 포트폴리오입니다.
+                            </div>
+                            <div class="content-more">
+                                <button>MAIN</button>
+                                <button>SUB</button>
+                                <button>PPT</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arrows">
+                    <img class="arrow slider-link prev" title="prev" src="img/next.png" alt="">
+                    <img class="arrow slider-link next" title="next" src="img/next.png" alt="">
+                </div>
+            </div>
+
+            <div class="three-section">
+                <div id="second">02</div>
+                <div class="skils-me-3d" id="skils-me-3d">
+                    <div class="skils-me-3d-front">skils</div>
                 </div>
             </div>
         </div>
@@ -80,7 +307,55 @@
     
     <script>
         // #main-show
-       
+        window.onload = () => {
+    let tl = gsap.timeline();
+    tl.from("#main-show-text-hello", 1.2, {
+        y: 100,
+        ease: "power4.out",
+        delay: 0.5,
+        opacity: 0,
+        stagger: {amount: 0.3}
+    })
+    .to("#main-show-text-hello", 1.8, {
+        opacity: 1,
+        ease: "expo.inOut",
+        stagger: 0.4
+    })
+    .from("#main-show-background", 1.5 ,{
+        delay: -10,
+        css:{height:"100vh"}
+    })
+    .to("#main-show-background", 1.5, {
+        delay: -2,
+        ease: "power4.out",
+        css: {height: "0vh"},
+        stagger: {amount: 0.2}
+    })
+    .to("#main-show-text-hello", 1.7, {
+        delay: 0.3,
+        ease: "power4.out",
+        css: {left: "35%"},
+        stagger: {amount: 0.3}
+    })
+    .from("#main-show-text-welcome", 0.5, {
+        delay: 0.1,
+        css: {opacity: "0"}
+    })
+    .to("#main-show-text-welcome", 0.1, {
+        delay: -0.1,
+        ease: "power4.out",
+        css: {opacity: "inline"}
+    })
+    .to("#main-show", 1.5, {
+        delay: 1,
+        ease: "power4.out",
+        y: "-100vh",
+        display: "none",
+        stagger: {amount: 0.3}
+    })
+
+    $(".loader").fadeOut();
+}
         // #menu 애니메이션
         var timeline = new TimelineMax();
 
@@ -89,8 +364,6 @@
             ease: "expo.inOut",
             delay: -1
         })
-
-    
         timeline.reverse();
 
         $(document).on("click", ".hamburger2", function(){
@@ -105,6 +378,9 @@
         gsap.set(".about-me-3d", {
             perspectiveOrigin: "center -100vh"
         });
+        gsap.set(".skils-me-3d", {
+            perspectiveOrigin: "center -100vh"
+        })
 
         gsap.to(".about-me-3d", {
             scrollTrigger: {
@@ -115,7 +391,70 @@
             }, perspectiveOrigin: "center 100vh",
             ease: "none"
         });
+        gsap.to(".skils-me-3d", {
+            scrollTrigger: {
+                trigger: ".about-me-3d",
+                scrub: true,
+                start: "top bottom",
+                end: "bottom top"
+            }, perspectiveOrigin: "center 70vh",
+            ease: "none"
+        });
+        
+        gsap.utils.toArray(".image #bg").forEach(img => {
+            let tween = gsap.to(img, {
+                xPercent: -100,
+                paused: true,
+            }).reverse();
 
+            img.addEventListener("click", () => {
+                tween.reversed(!tween.reversed());
+            })
+        });
+
+        //
+        ( function($){
+            $(document).ready(function(){
+                var s = $(".two-section"),
+                    sWrapper = s.find(".slider-wrapper"),
+                    sItem = s.find(".slide"),
+                    btn = s.find(".slider-link"),
+                    sWidth = sItem.width();
+                    sCount = sItem.length,
+                    slide_date = s.find(".content-date"),
+                    slide_title = s.find(".content-title"),
+                    slide_text = s.find(".content-text"),
+                    slide_more = s.find(".content-more"),
+                    slide_image = s.find(".image img"),
+                    sTotalWidth = sCount * sWidth;
+
+                sWrapper.css("width", sTotalWidth);
+
+                var clickCount = 0;
+
+                btn.on("click", function(e){
+                    e.preventDefault();
+
+                    if( $(this).hasClass("next")){
+                        (clickCount < (sCount - 1)) ? clickCount++ : clickCount = 0;
+                    }else if( $(this).hasClass("prev")){
+                        (clickCount > 0) ? clickCount-- : (clickCount = sCount - 1);
+                    }
+                    TweenMax.to(sWrapper, 0.4, {
+                        x: "-" + (sWidth * clickCount)
+                    })
+
+                    var fromProperties = {autoAlpha:0, x:'-50', y:'-10'};
+                    var toProperties = {autoAlpha:0.8, x:'0', y:'0'};
+
+                    TweenLite.fromTo(slide_image, 1, {autoAlpha:0, y:'40'}, {autoAlpha:1, y:'0'});
+                    TweenLite.fromTo(slide_date, 0.4, fromProperties, toProperties);
+                    TweenLite.fromTo(slide_title, 0.6, fromProperties, toProperties);
+                    TweenLite.fromTo(slide_text, 0.8, fromProperties, toProperties);
+                    TweenLite.fromTo(slide_more, 1, fromProperties, toProperties);
+                })
+            })
+        })(jQuery);
     </script>
 </body>
 </html>
