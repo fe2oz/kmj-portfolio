@@ -398,7 +398,7 @@ main #site-video .video-about-me #sticker {
   width: 15vw;
   position: absolute;
   left: 2%;
-  top: 10%;
+  top: 8%;
   -webkit-transform: rotate(-10deg);
           transform: rotate(-10deg);
   -webkit-filter: invert(1);
