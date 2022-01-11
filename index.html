@@ -13,6 +13,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/Draggable.min.js"></script>
 
     <script src="js/index.js"></script>
 </head>
@@ -66,6 +67,11 @@
           <div id="container-fluid">
             <div id="container-fluid-img"></div>
             <div id="layer"></div>
+            <img id="deco2" src="img/twink2.png" alt="">
+            <img id="deco3" src="img/twink3.png" alt="">
+            <img id="deco4" src="img/twink6.png" alt="">
+            <img id="deco5" src="img/twink5.png" alt="">
+            <img id="deco6" src="img/twink7.png" alt="">
           </div>
         </div>
     
@@ -101,7 +107,7 @@
     
         <div id="min-section">
           <div id="min-section-show">
-            <img id="sticker" src="img/stic.png" alt="">
+            <img id="sticker2" src="img/stic.png" alt="">
             <h1>My Work ···</h1>
           </div>
     
@@ -132,7 +138,8 @@
     
                 <div>
                   <p>아이패드 ui 형식으로 제작하였습니다. 메인 페이지, 4개의 서브 페이지로 구성되어 있습니다.
-                    <br><br>메인 페이지에서 하단 4개의 아이콘을 클릭하면 각 해당 서브 페이지로 이동합니다.
+                    <br><br>메인 페이지에서 하단 4개의 아이콘을 클릭하면 각 해당 서브 페이지로 이동합니다.<br><br>
+                    첫 번째 서브 페이지는 카카오 API를 이용하여 키워드를 검색하면 이미지를 가져올 수 있도록 하였습니다.
                   </p>
     
                   <section>
@@ -160,7 +167,7 @@
                   <p>스튜디오 지브리사의 영화 모노노케 히메 홈페이지를 제작하였습니다. 영화의 분위기를 생각해
                     흰색과 파란색을 주로 사용하였고, 플러그인을 사용하여 눈이 내리는 효과를 연출하였습니다.<br><br>
                     메인 페이지와 3개의 서브 페이지로 구성되어 있으며, 모바일 사용자에 맞게 반응형 홈페이지로 제작되었습니다.<br><br>
-                    상단 메뉴에 ABOUT / CLIP / GALLERY 를 클릭하면 각 해당 서브 페이지로 이동합니다.
+                    상단 메뉴 중 ABOUT / CLIP / GALLERY 를 클릭하면 각 해당 서브 페이지로 이동합니다.
                   </p>
     
                   <section>
@@ -215,12 +222,12 @@
                   <p>캐나다의 가수이자 프로듀서인 위켄드의 홈페이지를 제작하였습니다. 최근 발매한 앨범의
                     콘셉트와 기존 가수의 홈페이지를 참고하여 주로 앨범 색상에 있는 파란색과 검은색을 사용하였습니다.<br><br>
                     메인 페이지와 동일한 레이아웃인 5개의 서브 페이지로 구성되어 있으며, 모바일 사용자에 맞게 반응형 홈페이지로 제작되었습니다.<br><br>
-                    상단 메뉴의 MUSIC 을 클릭하면 해당 서브 페이지로 이동합니다.
+                    상단 메뉴 중 MUSIC 을 클릭하면 해당 서브 페이지로 이동합니다.
                   </p>
     
                   <section>
-                    <button>MAIN</button>
-                    <button>SUB5</button>
+                    <button onclick="window.open('about:blank').location.href='https://fe2oz.github.io/TheWeeknd/';">MAIN</button>
+                    <button onclick="window.open('about:blank').location.href='https://fe2oz.github.io/TheWeeknd/music.html';">SUB</button>
                     <button>PPT</button>
                   </section>
                 </div>
@@ -244,7 +251,7 @@
                 </p>
       
                 <section>
-                  <button onclick="window.open('about:blank').location.href=''">MAIN</button>
+                  <button onclick="window.open('about:blank').location.href='https://fe2oz.github.io/Marcello-Barenghi/'">MAIN</button>
                   <button>PPT</button>
                 </section>
               </div>
@@ -284,7 +291,7 @@
     
             <div id="min-section-grid-text">
                 <div>
-                  <p>"2021.12.22. ~ 2022.01.09."</p>
+                  <p>"2021.11.25. ~ 2021.12.01."</p>
                   <p>iPad UI Website</p>
                 </div>
     
@@ -298,7 +305,86 @@
                   </p>
     
                   <section>
-                    <button onclick="window.open('about:blank').location.href='https://fe2oz.github.io/My-Favorite-Things/';">MAIN</button>
+                    <button onclick="window.open('about:blank').location.href='https://fe2oz.github.io/MyName/';">MAIN</button>
+                    <button>PPT</button>
+                  </section>
+                </div>
+            </div>
+          </div>
+
+          <div id="min-section-grid2"> <!--머신 건 켈리-->
+            <div id="min-section-grid-text2"> 
+              <div>
+                <p>"2021.11.16. ~ 2021.11.24."</p>
+                <p>Machine gun kelly Website</p>
+              </div>
+      
+              <div>
+                <p>
+                  미국의 래퍼이자 가수인 머신 건 켈리의 홈페이지를 제작하였습니다.<br><br>
+                  최근 발매한 앨범의 콘셉트와 기존 가수의 홈페이지를 참고하여 주로 검은색과 포인트로 핑크색 색상을
+                  사용하였습니다.<br><br>
+                  메인 페이지와 1개의 서브 페이지로 구성되어 있으며, 모바일 사용자에 맞게 반응형 홈페이지로 제작되었습니다.<br><br>
+                  상단 메뉴 중 TOUR를 클릭하시면 해당 서브 페이지로 이동합니다.
+                </p>
+      
+                <section>
+                  <button onclick="window.open('about:blank').location.href='https://fe2oz.github.io/portfolio3-1/'">MAIN</button>
+                  <button  onclick="window.open('about:blank').location.href='https://fe2oz.github.io/portfolio3-1/sub_tour.html'">SUB</button>
+                  <button>PPT</button>
+                </section>
+              </div>
+            </div>
+      
+            <div id="min-section-grid-image2">
+              <div>
+                <img src="img/6-1.jpeg" alt="">
+              </div>
+              <div>
+                <img src="img/6-2.jpeg" alt="">
+              </div>
+              <div>
+                <img src="img/6-3.jpeg" alt="">
+              </div>
+              <div>
+                <img src="img/6-4.jpeg" alt="">
+              </div>
+            </div>
+          </div>
+
+          <div id="min-section-grid"> <!--쇼핑몰-->
+            <div id="min-section-grid-image">
+                <div>
+                  <img src="img/7-1.jpeg" alt="">
+                </div>
+                <div>
+                  <img src="img/7-2.jpeg" alt="">
+                </div>
+                <div>
+                  <img src="img/7-3.jpeg" alt="">
+                </div>
+                <div>
+                  <img src="img/7-4.jpeg" alt="">
+                </div>
+            </div>
+    
+            <div id="min-section-grid-text">
+                <div>
+                  <p>"2021.10.08. ~ 2021.10.27."</p>
+                  <p>VAMIR Website</p>
+                </div>
+    
+                <div>
+                  <p>
+                    기본적인 html, css를 갖추고 제작한 첫 홈페이지입니다.<br><br>
+                    모든 게 생소했던 터라 원하는 곳으로 배치는 어떻게 해야하는 건지, 크기는 얼마나
+                    잡아야 하는 건지 우왕좌왕했었던 첫 작업물 입니다.<br><br>
+                    메인 페이지와 1개의 서브 페이지로 구성되어 있습니다.
+                  </p>
+    
+                  <section>
+                    <button onclick="window.open('about:blank').location.href='https://fe2oz.github.io/shoppingmall.html/';">MAIN</button>
+                    <button onclick="window.open('about:blank').location.href='https://fe2oz.github.io/shoppingmall.html/sub.html';">SUB</button>
                     <button>PPT</button>
                   </section>
                 </div>
@@ -319,7 +405,7 @@
       $("#hamburger").hide();
 
       $(window).scroll(function(){
-        if($(this).scrollTop() > 2000){
+        if($(this).scrollTop() > 3000){
           $("#hamburger").fadeIn();
         }else{
           $("#hamburger").fadeOut();
@@ -377,6 +463,14 @@
     $(document).on("click", "a", function(){
         timeline.reverse();
     });
+
+
+    var iTem = "#deco2, #deco3, #deco4, #deco5, #deco6";
+
+    Draggable.create(iTem, {
+        edgeResistance:1,
+		throwProps:true
+    })
     </script>
 </body>
 </html>

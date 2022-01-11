@@ -148,13 +148,34 @@ header div:nth-of-type(1) span {
   padding-top: var(--padding--result);
   cursor: pointer;
   position: fixed;
-  left: 1%;
-  top: 45%;
+  left: 2.3%;
+  top: 2.7%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 #min-nav #hamburger img {
-  width: 2.5vw;
-  mix-blend-mode: difference;
+  width: 1.5vw;
+  -webkit-filter: invert(0);
+          filter: invert(0);
+}
+
+#min-nav #hamburger::after {
+  content: "";
+  width: 2.8vw;
+  height: 5vh;
+  position: fixed;
+  left: 1.6%;
+  top: 1.5%;
+  z-index: -1;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+#min-nav #hamburger:hover img, #min-nav #hamburger:hover::after {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 #min-nav #menu {
@@ -255,6 +276,7 @@ header div:nth-of-type(1) span {
           justify-content: center;
   margin: 0 auto;
   margin-top: 1.5%;
+  position: relative;
 }
 
 #slider #container-fluid {
@@ -282,11 +304,45 @@ header div:nth-of-type(1) span {
 }
 
 #slider #layer {
-  width: 92%;
+  width: 95%;
   height: 50vh;
   background: rgba(0, 0, 0, 0.3);
   position: absolute;
-  top: 30.5%;
+  top: 18.9%;
+}
+
+#slider #deco2 {
+  position: absolute;
+  left: 10%;
+  top: 5%;
+}
+
+#slider #deco3 {
+  position: absolute;
+  left: 10%;
+  top: 5%;
+}
+
+#slider #deco4 {
+  position: absolute;
+  left: 75%;
+  top: 35%;
+  -webkit-transform: rotate(-35deg);
+          transform: rotate(-35deg);
+}
+
+#slider #deco5 {
+  position: absolute;
+  left: 20%;
+  top: 55%;
+}
+
+#slider #deco6 {
+  position: absolute;
+  left: 60%;
+  top: 35%;
+  -webkit-filter: invert(0.8) opacity(0.8);
+          filter: invert(0.8) opacity(0.8);
 }
 
 main {
@@ -384,11 +440,11 @@ main #site-video .video-about-me #sticker {
   padding: 50px;
 }
 
-#min-section-show #sticker {
+#min-section-show #sticker2 {
   width: 15vw;
   position: absolute;
-  left: 2%;
-  top: 30%;
+  left: 4%;
+  top: 40%;
   -webkit-transform: rotate(-10deg);
           transform: rotate(-10deg);
   -webkit-filter: invert(0);
