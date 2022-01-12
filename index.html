@@ -7,6 +7,7 @@
     <title>Min-Jung Portfolio</title>
 
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="scss/index.css">
 
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script></script>
 
@@ -53,7 +54,7 @@
                     <a href="#min-section-show">works</a>
                 </li>
                 <li>
-                    <a href="#skils-me-3d">skils</a>
+                    <a href="#skils-section">skils</a>
                 </li>
                
                 <li>
@@ -90,6 +91,7 @@
                   </div>
                 </div>
               </div>
+
           </section>
         </main>
     
@@ -325,7 +327,7 @@
                   최근 발매한 앨범의 콘셉트와 기존 가수의 홈페이지를 참고하여 주로 검은색과 포인트로 핑크색 색상을
                   사용하였습니다.<br><br>
                   메인 페이지와 1개의 서브 페이지로 구성되어 있으며, 모바일 사용자에 맞게 반응형 홈페이지로 제작되었습니다.<br><br>
-                  상단 메뉴 중 TOUR를 클릭하시면 해당 서브 페이지로 이동합니다.
+                  상단 메뉴 중 TOUR를 클릭하면 해당 서브 페이지로 이동합니다.
                 </p>
       
                 <section>
@@ -392,85 +394,100 @@
           </div>
     
         </div> <!--min-section-->
+
+        <div id="skils-section">
+          <div id="skils-section-show">
+            <img id="sticker3" src="img/stic.png" alt="">
+            <h1>My Skils ···</h1>
+          </div>
+          <div id="skils-section-cover"></div>
+        </div>
     </div>
     
     <script>
       $(document).ready(function(){
-      window.onload = () => {
-      $(".loader").fadeOut();
-    }
-    })
-
-    $(document).ready(function(){
-      $("#hamburger").hide();
-
-      $(window).scroll(function(){
-        if($(this).scrollTop() > 3000){
-          $("#hamburger").fadeIn();
-        }else{
-          $("#hamburger").fadeOut();
+        window.onload = () => {
+        $(".loader").fadeOut();
         }
       })
-    })
+
+      $(document).ready(function(){
+        $("#hamburger").hide();
+
+        $(window).scroll(function(){
+          if($(this).scrollTop() > 3000){
+            $("#hamburger").fadeIn();
+          }else{
+            $("#hamburger").fadeOut();
+          }
+        })
+      })
     </script>
 
     <script>
         gsap.to("#site-video .container-fluid", {
-        padding: 0,
-        ease: "none",
-        scrollTrigger: {
-            trigger: "#site-video .container-fluid",
-            pin: "#main",
-            pinnedContainer: "#main",
-            start: "top",
-            scrub: true,
-            invalidateOnRefresh: true
-        }
+          padding: 0,
+          ease: "none",
+          scrollTrigger: {
+              trigger: "#site-video .container-fluid",
+              pin: "#main",
+              pinnedContainer: "#main",
+              start: "top",
+              scrub: true,
+              invalidateOnRefresh: true
+          }
         });
 
         let tl1 = gsap.timeline();
-        tl1.to("#out-text", {
-        xPercent: 35,
-        scrollTrigger: {
-            trigger: "#out-text",
-            scrub: 1
-        }
+          tl1.to("#out-text", {
+          xPercent: 35,
+          scrollTrigger: {
+              trigger: "#out-text",
+              scrub: 1
+          }
         })
 
         let tl4 = gsap.timeline();
-        tl1.to(".out2-text", {
-        xPercent: -35,
-        scrollTrigger: {
-            trigger: ".out2-text",
-            scrub: 1
-        }
-        })
+          tl1.to(".out2-text", {
+          xPercent: -35,
+          scrollTrigger: {
+              trigger: ".out2-text",
+              scrub: 1
+          }
+        });
 
-
+        let tl5 = gsap.timeline();
+          tl5.to("#skils-section-cover", {
+            left: "-150%",
+              scrollTrigger: {
+                trigger: "#skils-section-cover",
+                scrub: 1
+              }
+          })
 
     var timeline = new TimelineMax();
 
-    timeline.to("#menu", 1, {
-        left: "0%",
-        ease: "expo.inOut",
-        delay: -1
-    })
-    timeline.reverse();
+      timeline.to("#menu", 1, {
+          left: "0%",
+          ease: "expo.inOut",
+          delay: -1
+      })
+      timeline.reverse();
 
-    $(document).on("click", ".hamburger2", function(){
-        timeline.play();
-    });
-    $(document).on("click", "a", function(){
-        timeline.reverse();
-    });
+      $(document).on("click", ".hamburger2", function(){
+          timeline.play();
+      });
+      $(document).on("click", "a", function(){
+          timeline.reverse();
+      });
 
 
     var iTem = "#deco2, #deco3, #deco4, #deco5, #deco6";
+      Draggable.create(iTem, {
+          edgeResistance:1,
+      throwProps:true
+    });
 
-    Draggable.create(iTem, {
-        edgeResistance:1,
-		throwProps:true
-    })
     </script>
 </body>
 </html>
