@@ -7,7 +7,6 @@
     <title>Min-Jung Portfolio</title>
 
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="scss/index.css">
 
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script></script>
 
@@ -54,7 +53,7 @@
                     <a href="#min-section-show">works</a>
                 </li>
                 <li>
-                    <a href="#skils-section">skils</a>
+                    <a href="#skils-section-show">more</a>
                 </li>
                
                 <li>
@@ -81,14 +80,11 @@
     
               <div class="container-fluid">
                 <div class="video">
-    
+                  
                   <div class="video-about-me" id="video-about-me">
-                    <img id="sticker" src="img/stic.png" alt="">
-                    <h1>About ···</h1>
-                    <div class="video-about-me-text">
-    
-                    </div>
+
                   </div>
+
                 </div>
               </div>
 
@@ -97,13 +93,13 @@
     
         <section id="services">
           <h1 id="out-text"> 
-            html scss javascript jQuery gsap html scss javascript jQuery gsap html scss javascript jQuery gsap html scss javascript jQuery gsap 
+            web RESPONSIVE WEB STANDARD web publisher dynamic design web RESPONSIVE WEB STANDARD web publisher dynamic design web RESPONSIVE WEB STANDARD web publisher dynamic design
           </h1>
           <h1 class="out2-text"> 
-            gsap jQuery javascript scss html gsap jQuery javascript scss html gsap jQuery javascript scss html gsap jQuery javascript scss html
+            dynamic design web publisher WEB STANDARD web RESPONSIVE dynamic design web publisher WEB STANDARD web RESPONSIVE dynamic design web publisher WEB STANDARD web RESPONSIVE
           </h1>
           <h1 id="out-text"> 
-            html scss javascript jQuery gsap html scss javascript jQuery gsap html scss javascript jQuery gsap html scss javascript jQuery gsap 
+            web RESPONSIVE WEB STANDARD web publisher dynamic design web RESPONSIVE WEB STANDARD web publisher dynamic design web RESPONSIVE WEB STANDARD web publisher dynamic design
           </h1>
         </section>
     
@@ -396,11 +392,32 @@
         </div> <!--min-section-->
 
         <div id="skils-section">
+          <section id="services">
+            <h1 id="inner-text"> 
+              html5 scss java javascript gsap html5 scss java javascript gsap html5 scss java javascript gsap html5 scss java javascript gsap 
+            </h1>
+            <h1 class="inner2-text"> 
+              gsap javascript java scss html5 gsap javascript java scss html5 gsap javascript java scss html5 gsap javascript java scss html5
+            </h1>
+            <h1 id="inner-text"> 
+              html5 scss java javascript gsap html5 scss java javascript gsap html5 scss java javascript gsap html5 scss java javascript gsap 
+            </h1>
+          </section>
+
           <div id="skils-section-show">
             <img id="sticker3" src="img/stic.png" alt="">
-            <h1>My Skils ···</h1>
+            <h1>More ···</h1>
           </div>
           <div id="skils-section-cover"></div>
+
+          <div id="skils-section-box">
+            <div id="skils-section-box-1" class="ssb"></div>
+            <div id="skils-section-box-2" class="ssb"></div>
+            <div id="skils-section-box-3" class="ssb"></div>
+            <div id="skils-section-box-4" class="ssb"></div>
+            <div id="skils-section-box-5" class="ssb"></div>
+          </div>
+
         </div>
     </div>
     
@@ -427,12 +444,12 @@
     <script>
         gsap.to("#site-video .container-fluid", {
           padding: 0,
-          ease: "none",
+          ease: "linear",
           scrollTrigger: {
               trigger: "#site-video .container-fluid",
               pin: "#main",
-              pinnedContainer: "#main",
-              start: "top",
+              start: "top top",
+              end: "bottom",
               scrub: true,
               invalidateOnRefresh: true
           }
@@ -458,11 +475,28 @@
 
         let tl5 = gsap.timeline();
           tl5.to("#skils-section-cover", {
-            left: "-150%",
+            top: "-150%",
+            ease: "linear",
               scrollTrigger: {
                 trigger: "#skils-section-cover",
                 scrub: 1
               }
+        });
+
+        let tl6 = gsap.timeline();
+          tl6.to("#inner-text", {
+            x: 1000,
+            duration: 50,
+            repeat: 1,
+            ease: "linear"
+        })
+
+        let tl7 = gsap.timeline();
+          tl7.to(".inner2-text", {
+            x:-1000,
+            duration: 50,
+            rapeat: 1,
+            ease: "linear"
           })
 
     var timeline = new TimelineMax();
