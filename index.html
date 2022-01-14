@@ -418,6 +418,30 @@
             <div id="skils-section-box-5" class="ssb"></div>
           </div>
 
+          <div id="skils-section-modal-1">
+            <div id="skils-section-modal-1-1">
+              <p class="codepen" data-height="500" data-theme-id="dark" data-default-tab="html,result" data-slug-hash="ZEXmZOj" data-user="fe2oz" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <span>See the Pen <a href="https://codepen.io/fe2oz/pen/ZEXmZOj">
+                pixel flower</a> by 김민중 (<a href="https://codepen.io/fe2oz">@fe2oz</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+              </p>
+              <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+              <img id="close1" src="img/1904654_cancel_close_cross_delete_reject_icon.png" alt="">
+            </div>
+          </div>
+
+          <div id="skils-section-modal-2">
+            <div id="skils-section-modal-1-2">
+              <p class="codepen" data-height="500" data-theme-id="dark" data-default-tab="html,result" data-slug-hash="jOGXWJv" data-user="fe2oz" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <span>See the Pen <a href="https://codepen.io/fe2oz/pen/jOGXWJv">
+                neon</a> by 김민중 (<a href="https://codepen.io/fe2oz">@fe2oz</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+              </p>
+              <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+              <img id="close2" src="img/1904654_cancel_close_cross_delete_reject_icon.png" alt="">
+            </div>
+          </div>
+
         </div>
     </div>
     
@@ -438,7 +462,9 @@
             $("#hamburger").fadeOut();
           }
         })
-      })
+      });
+
+
     </script>
 
     <script>
@@ -521,6 +547,34 @@
           edgeResistance:1,
       throwProps:true
     });
+
+    </script>
+
+    <script>
+      const modalOne = document.getElementById("skils-section-modal-1");
+      const modalTwo = document.getElementById("skils-section-modal-2");
+      const oneMore = document.getElementById("skils-section-box-1");
+      const twoMore = document.getElementById("skils-section-box-2");
+      const modalOneClose = document.getElementById("close1");
+      const modalTwoClose = document.getElementById("close2");
+
+      oneMore.addEventListener("click", function(){
+        modalOne.style.display = "block";
+        $("body").css("overflow", "hidden");
+      });
+      modalOneClose.addEventListener("click", function(){
+        modalOne.style.display = "none";
+        $("body").css("overflow", "scroll")
+      });
+
+      twoMore.addEventListener("click", function(){
+        modalTwo.style.display = "block";
+        $("body").css("overflow", "hidden");
+      });
+      modalTwoClose.addEventListener("click", function(){
+        modalTwo.style.display = "none";
+        $("body").css("overflow", "scroll")
+      });
 
     </script>
 </body>

@@ -834,7 +834,10 @@ main #site-video .video-about-me-text {
 }
 
 #skils-section-box-2 {
-  background: orangered;
+  background-image: url(../img/ezgif.com-gif-maker.gif);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
 }
 
 #skils-section-box-3 {
@@ -847,4 +850,40 @@ main #site-video .video-about-me-text {
 
 #skils-section-box-5 {
   background: yellow;
+}
+
+#skils-section-modal-1, #skils-section-modal-2 {
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: brightness(60%);
+          backdrop-filter: brightness(60%);
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 9999;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: none;
+}
+
+#skils-section-modal-1-1, #skils-section-modal-1-2, #skils-section-modal-2-1, #skils-section-modal-2-2 {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  left: 10%;
+  top: 25%;
+}
+
+#skils-section-modal-1-1 #close1,
+#skils-section-modal-1-1 #close2, #skils-section-modal-1-2 #close1,
+#skils-section-modal-1-2 #close2, #skils-section-modal-2-1 #close1,
+#skils-section-modal-2-1 #close2, #skils-section-modal-2-2 #close1,
+#skils-section-modal-2-2 #close2 {
+  position: absolute;
+  right: 0%;
+  top: -10%;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  cursor: pointer;
 }
